@@ -1,68 +1,54 @@
-# Vue Chart Component with Chart.js
+# Компонент для отображения линейных диаграмм на Vue
 
-A reactive chart component for Vue.js application, powered by [Chart.js](https://www.chartjs.org/) library. This is a final working example from my tutorial: [Vue Chart Component with Chart.js](https://bagja.net/blog/vue-chart-component-with-chartjs.html).
+Компонент для отображения линейных диаграмм для приложения Vue.js, работающий на базе библиотеки Chart.js
 
-Check out the demo here: [risan.github.io/vue-chart-example](https://risan.github.io/vue-chart-example/).
+![Vue Chart Example](./readme_img/test1.png)
 
-![Vue Chart Example](https://media.giphy.com/media/557HUQUQ7RdMQbX9th/giphy.gif)
+## Требования
 
-## Requirements
-
-The following item is required to run this example:
+Для запуска этого примера требуется следующий элемент:
 
 * [Node.js](https://nodejs.org/)
 
-## Installation
+## Установка
 
-### 1. Clone the Repository
+### 1. Клонировать репозиторий
 
-To clone this repository, run the following command on your terminal:
-
-```bash
-$ git clone git@github.com:risan/vue-chart-example.git
-```
-
-### 2. Install the Dependencies
-
-Within the project directory, run the following command to install all of the required dependencies:
+Чтобы клонировать этот репозиторий, выполните на своем терминале следующую команду:
 
 ```bash
-# Go to the project directory
-$ cd vue-chart-example
-
-# Install all of the dependencies
-$ npm install
-
-# Or if you prefer to use Yarn
-$ yarn install
+git clone https://github.com/Nikonoffcmi/Web-rgr.git
 ```
 
-### 3. Run the Application 🎉
+### 2. Установите зависимости
 
-To run the application, run the following command:
+В каталоге проекта выполните следующие команды, чтобы установить все необходимые зависимости:
+
+Перейдите в каталог проекта
+```bash
+cd Web-rgr
+```
+Установите все зависимости
+```bash
+npm install
+```
+
+### 3. Запустите приложение
+
+Чтобы запустить приложение, выполните следующую команду:
 
 ```bash
-$ npm run serve
-
-# Or with yarn
-$ yarn serve
+npm run serve
 ```
 
-The above command will start the development server. Open your browser and visit the application at [localhost:8080](http://localhost:8080).
+Приведенная выше команда запустит сервер разработки. Откройте браузер и перейдите к приложению по адресу [localhost:8080](http://localhost:8080).
 
-### 4. Build for Production
+### 4. Сборка
 
-To build the application for production, run the following command:
+Чтобы собрать приложение, выполните следующую команду:
 
 ```bash
-$ npm run build
-
-# Or with yarn
-$ yarn build
+npm run build
 ```
 
-The optimized build files will be available at `dist` directory.
-
-## License
-
-MIT © [Risan Bagja Pradana](https://bagja.net)
+Оптимизированные файлы сборки будут доступны в каталоге dist.

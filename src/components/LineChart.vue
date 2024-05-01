@@ -41,7 +41,7 @@ export default {
     },
     mounted() {
         this.chart = new Chart(this.$refs.myChart, {
-        type: this.type,
+        type: "line",
         data: {
             labels: this.labels,
             datasets: this.datasets

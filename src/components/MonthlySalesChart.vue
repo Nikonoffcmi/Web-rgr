@@ -13,12 +13,6 @@
             Продажи за 2022
             </label>
         </div>
-        <!-- <div class="control">
-            <label  class="checkbox">
-                <input type="checkbox" v-model="isChecked" @change="handleCheckboxChange">
-            Пр
-            </label>
-        </div> -->
         </div>
 
         <line-chart
@@ -40,15 +34,13 @@ const datasets = {
         label: 'Продажи за 2023',
         borderColor: 'rgba(50, 115, 220, 0.5)',
         backgroundColor: 'rgba(50, 115, 220, 0.1)',
-        data: [300, 700, 450, 750, 450],
-        type: "pie",
+        data: [300, 700, 450, 750, 450]
     },
     2022: {
         label: 'Продажи за 2022',
         borderColor: 'rgba(255, 56, 96, 0.5)',
         backgroundColor: 'rgba(255, 56, 96, 0.1)',
-        data: [600, 550, 750, 250, 700],
-        type: "line"
+        data: [600, 550, 750, 250, 700]
     },
 };
 
@@ -90,44 +82,6 @@ export default {
         displayedDatasets() {
         return this.selectedYears.map(year => datasets[year]);
         }
-    },
+    }
 }
-    // methods: {
-    //     handleCheckboxChange() {
-    //     if (this.isChecked) {
-            
-    //         myChart = new Chart(ctx, {
-    //             type: "line",
-    //             data: datasets,
-    //         });
-    //         this.updateChart()
-
-    //     } else {
-    //         this.chart.destroy();
-    //         myChart = new Chart(ctx, {
-    //             type: "pie",
-    //             data: datasets,
-    //         });
-    //         this.updateChart()
-    //     }
-    //     },
-//         updateChartType() {
-//   // Since you can't update chart type directly in Charts JS you must destroy original chart and rebuild
-//         myChart.destroy();
-//         myChart = new Chart(ctx, {
-//             type: handleCheckboxChange(),
-//             data: datasets,
-//         });
-//     },
-// mounted() {
-//         let tt = "line"
-//         this.chart = new Chart(this.$refs.myChart, {
-//         type: tt,
-//         data: {
-//             labels: this.labels,
-//             datasets: this.datasets
-//         },
-//         options: this.options
-//         });
-//     },
 </script>
