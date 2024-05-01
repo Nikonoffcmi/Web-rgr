@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Vue Line Chart Example</title>
+        <meta name="viewport" content="width=device-width,initial-scale=1.0">
+        
+        <link rel="icon" href="<%= BASE_URL %>favicon.ico">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.2/css/bulma.min.css" integrity="sha256-2pUeJf+y0ltRPSbKOeJh09ipQFYxUdct5nTY6GAXswA=" crossorigin="anonymous">
+
+        <style>
+        .container {
+            max-width: 720px;
+        }
+        </style>
+    </head>
+    <body>
+        <nav class="navbar is-primary">
+        <div class="container">
+            <div class="navbar-brand">
+                <div class="navbar-item">
+                    <h1 class="has-text-weight-semibold">
+                    <span>📊</span> Vue Line Chart Example
+                    </h1>
+                </div>
+            </div>
+        </div>
+        </nav>
+
+        <section class="section">
+        <div class="container">
+            <div id="app"></div>
+        </div>
+        </section>
+
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-27136969-14"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'UA-27136969-14', {
+                page_title: 'Vue Line Chart Example',
+                page_path: '/vue-chart-example',
+                anonymizeIp: true
+            });
+        </script>
+    </body>
+</html>
