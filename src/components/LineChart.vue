@@ -3,11 +3,10 @@
 </template>
 
 <script>
-import Chart from 'chart.js';
-import { useListeners } from 'vue';
+import Chart from 'chart.js/auto';
 
 export default {
-    name: 'monthly-sales-chart',
+    name: 'line_chart',
     props: {
         width: {
         type: Number,

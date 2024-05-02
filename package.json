@@ -6,13 +6,13 @@
         "build": "NODE_ENV=production vue-cli-service build"
     },
     "dependencies": {
-        "chart.js": "^2.7.2",
+        "chart.js": "^4.4.2",
         "numeral": "^2.0.6",
-        "vue": "^2.5.17"
+        "vue": "^3.4.26"
     },
     "devDependencies": {
-        "@vue/cli-plugin-babel": "^3.0.5",
-        "@vue/cli-service": "^3.0.5",
-        "vue-template-compiler": "^2.5.17"
+        "@vue/cli-plugin-babel": "^5.0.8",
+        "@vue/cli-service": "^5.0.8",
+        "vue-template-compiler": "^2.7.16"
     }
 }

@@ -1,20 +1,5 @@
 <template>
     <div>
-        <div class="field is-grouped">
-        <div class="control">
-            <label class="checkbox">
-            <input type="checkbox" :value="2023" v-model="selectedYears">
-            Продажи за 2023
-            </label>
-        </div>
-        <div class="control">
-            <label class="checkbox">
-            <input type="checkbox" :value="2022" v-model="selectedYears">
-            Продажи за 2022
-            </label>
-        </div>
-        </div>
-
         <line-chart
         :width="500"
         :height="300"
@@ -31,13 +16,13 @@ import LineChart from './LineChart';
 
 const datasets = {
     2023: {
-        label: 'Продажи за 2023',
+        label: 'Данные 1',
         borderColor: 'rgba(50, 115, 220, 0.5)',
         backgroundColor: 'rgba(50, 115, 220, 0.1)',
         data: [300, 700, 450, 750, 450]
     },
     2022: {
-        label: 'Продажи за 2022',
+        label: 'Данные 2',
         borderColor: 'rgba(255, 56, 96, 0.5)',
         backgroundColor: 'rgba(255, 56, 96, 0.1)',
         data: [600, 550, 750, 250, 700]
@@ -46,28 +31,35 @@ const datasets = {
 
 const options = {
     scales: {
-        yAxes: [{
-        ticks: {
+        y: {
             beginAtZero: true,
-            callback: value => numeral(value).format('0,0')
+            ticks: {
+                callback: value => numeral(value).format('0,0')
+            }
         }
-        }]
     },
-    tooltips: {
-        mode: 'index',
-        callbacks: {
-        label(tooltipItem, data) {
-            const label = data.datasets[tooltipItem.datasetIndex].label;
-            const value = numeral(tooltipItem.yLabel).format('0,0.0');
+    plugins: {
+        tooltip: {
+            mode: 'index',
+            callbacks: {
+                label: function(context) {
+                        let label = context.dataset.label || '';
 
-            return `${label}: ${value}`;
-        }
-        }    
+                        if (label) {
+                            label += ': ';
+                        }
+                        if (context.parsed.y !== null) {
+                            label += new Intl.NumberFormat().format(context.parsed.y);
+                        }
+                        return label;
+                    }
+            }
+    }    
     },
 };
 
 export default {
-    name: 'monthly-sales-chart',
+    name: 'line_chart',
     datasets,
     options,
     components: {
